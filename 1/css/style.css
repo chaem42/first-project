@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+
+
+
+
+
+
+
+h1 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+#A {
+    color: rgb(44, 200, 44);
+    font-size: 8em;     /* 이건 3배! */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#B {
+    color: rgb(110, 110, 110);
+    font-size: 8em;     
+}
+
+#C {
+    color: rgb(165, 4, 160);
+    font-size: 8em;     
+}
+
+#D {
+    color: rgb(255, 247, 1);
+    font-size: 8em;     
+}
+
+#E {
+    color: rgb(255, 1, 1);
+    font-size: 8em;
+}
+
+h1 {
+    color: rgba(238, 75, 75, 0.626);
+}

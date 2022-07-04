@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/* Web Fonts------------------------------ */
+/* font-family: 'Orbitron', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* Step.1------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Step.2------------------------------ */
+body {
+    background-color: rgb(178, 236, 255);
+}
+
+section {
+    /* 세로는 거의 정하지않음. 컨텐츠가 어떻게 될지 모르니까 가로만 정함 */
+    width: 350px;
+    padding: 25px;
+    margin: 50px auto;
+    border-radius: 10px;
+
+    background-color: white;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.13);
+}
+
+/* Step.3------------------------------ */
+
+section nav.menu {
+    width: 100%;
+}
+
+section nav.menu::after {
+    /* ::after가상요소 선택자! float없앨려고 */
+    content: '';
+    display: block;
+    clear: both;
+    /* clear은 블록요소에만 적용가능, 인라인에서는 적용안됨 */
+}
+
+section nav.menu a {
+    font-size: 20px;
+    color: rgb(142, 142, 142);
+}
+
+section nav.menu a:nth-of-type(1) {
+    float: left;
+}
+
+section nav.menu a:nth-of-type(2) {
+    float: right;
+}
+
+/* section nav.menu {
+    border: 3px solid rgb(255, 0, 0);
+} */
+
+/* Step.4------------------------------ (이미지 사진)*/
+
+section article.profile {
+    width: 100%;
+    text-align: center;
+}
+section article.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;    
+
+    box-shadow: 5px 15px 30px rgb(173, 216, 230, 0.7);    /* 각 색마다 255까지 최대값 r,g,b,투명도 순서 */
+}
+section article.profile h1 {    /* name */
+    font-weight: bold;
+    font-size: 17px;    /* 기본 사이즈가 16px임 */
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1;
+    color:#555;
+
+    margin-bottom: 5px;
+}
+section article.profile h2 {    /* job name */
+    font-weight: normal;
+    font-size: 11px;    /* 기본 사이즈가 16px임 */
+    font-family: 'Orbitron', sans-serif;
+    color:#bbb;
+
+    margin-bottom: 30px;
+}
+section article.profile a.btnView{  /* View More 버튼 */
+    display: block;
+    width: 200px;
+    height: 32px;
+    margin: 0 auto 20px;            /* 상하 좌우 결정 */
+    border-radius: 16px;
+
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "arial";
+    line-height: 32px;               /* 행의 높이를 컨텍층영역의 높이와 동이하게 하면 수직으로 딱 중앙에 오게됨 */
+
+    background-color: #444;
+    color: #fff;
+
+    background: linear-gradient(45deg, #69c7c7, #41b8c7);
+    box-shadow: 5px 10px 20px rgba(0, 190, 255, 0.40)
+    /* border:1px double red; */
+}
+section ul.contact{                 /* 연락처 모음 */
+    margin-bottom: 25px;
+}
+section ul.contact li{              /* li랑 ul 둘 다 block */
+    width: 100%;
+    padding: 10PX 0PX;
+    border-bottom: 1PX solid #eee;
+}
+section ul.contact li:last-child {
+    border-bottom: none;
+}
+section ul.contact li i{            /* i는 인라인 */
+    width: 20%;
+    font-size: 15px;
+    color: #555;
+    text-align: center;
+    text-shadow: 2px 2px 2px #ddd;
+}
+section ul.contact li span {
+    font-weight: normal;
+    font-size: 12px;
+    font-family: 'Orbitron', sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+}
+section nav.others {
+    width: 100%;
+    text-align: center;
+}
+section nav.others a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 50%;
+
+    opacity: .4;
+    filter: saturate(.7);
+}
+section nav.others a.on {
+    opacity: 1;         /* 밝게 보여라 완전히? */
+    filter: saturate(1);    /* 완전한 색깔로 칠해라 */
+}
+section nav.others a:nth-of-type(1) {
+    background-color: #49c7d8;
+    box-shadow: 5px 5px 10px rgba(96, 176, 184, 0.7);
+}
+section nav.others a:nth-of-type(2) {
+    background-color: #8fe19c;
+    box-shadow: 5px 5px 10px rgb(108, 219, 127, 0.7);
+}
+section nav.others a:nth-of-type(3) {
+    background-color: #fcec34;
+    box-shadow: 5px 5px 10px rgba(253, 255, 114, 0.7);
+}
+section nav.others a:nth-of-type(4) {
+    background-color: #e5b9e7;
+    box-shadow: 5px 5px 10px rgba(233, 153, 253, 0.7);
+}
